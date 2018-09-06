@@ -91,7 +91,18 @@ def binary_multiple_of_4?(s)
   # Convert string to integer via 2's compliment
   @str = s
   @num = @str.to_i(2)
-  
+  while @str != "0"
+        if @num == 0
+                return false
+        end
+        break
+  end
+
+  if @num % 4 == 0
+        return true
+  else
+        return false
+  end
 end
 
 # Part 3
