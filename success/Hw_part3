@@ -1,0 +1,23 @@
+Run options: include {:full_description=>/getters\ and\ setters/}
+
+BookInStock
+  getters and setters
+    should set ISBN [10 points]
+    should set price [10 points]
+    should be able to change ISBN [10 points]
+    should be able to change price [10 points]
+
+Finished in 0.00133 seconds (files took 0.08646 seconds to load)
+4 examples, 0 failures
+
+Run options: include {:full_description=>/constructor/}
+
+BookInStock
+  constructor
+    should reject invalid ISBN number [10 points]
+    should reject zero price [10 points]
+    should reject negative price [10 points]
+
+Finished in 0.00182 seconds (files took 0.1026 seconds to load)
+3 examples, 0 failures
+
