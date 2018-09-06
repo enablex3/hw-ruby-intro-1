@@ -50,7 +50,7 @@ end
 def sum_to_n?(array, n)
   # Unless the arry is empty...
   unless array.empty?
-	  @sum = 0
+          @sum = 0
 	  # Return true if any two elements added equal n
 	  return array.combination(2).any? { |n1, n2| n1 + n2 == n }
   else
@@ -72,11 +72,26 @@ end
 
 def starts_with_consonant?(s)
   # Initiate vowels array
-  return s.upcase
+  @vowels =  ['a','e','i','o','u']
+  @str = s
+  # Check for special characters
+  unless @str =~ /\A[[:alnum:]]+\z/
+          return false
+  end
+  # Check for empty string
+  unless @str.nil?
+          @first_letter = @str[0]
+          return !(@vowels.any? { |l| l.upcase == @first_letter.upcase })
+  else
+          return false
+  end
 end
 
-def binary_multiple_of_4? s
-  # YOUR CODE HERE
+def binary_multiple_of_4?(s)
+  # Convert string to integer via 2's compliment
+  @str = s
+  @num = @str.to_i(2)
+  
 end
 
 # Part 3
