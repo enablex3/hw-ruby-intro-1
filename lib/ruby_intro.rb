@@ -62,11 +62,17 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  # Say "Hello" to name if name is a String
+  if name.is_a? String 
+	  return "Hello, #{name}"
+  else
+	  return "#{name} should be a string!"
+  end
 end
 
-def starts_with_consonant? s
-  # YOUR CODE HERE
+def starts_with_consonant?(s)
+  # Initiate vowels array
+  return s.upcase
 end
 
 def binary_multiple_of_4? s
