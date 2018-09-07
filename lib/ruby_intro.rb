@@ -129,6 +129,23 @@ class BookInStock
   end
   
   # This method will return the price as a string
-  def price_as_string(price)
+  def price_as_string()
+	  @dolla_sign = "$"
+	  # Round to two decimal places
+	  @price = @price.to_f
+	  @price = @price.round(2)
+	  # "Stringify the price"
+	  @price = "#{@price}"
+	  # Find the index of the decimal point, since by default, floats add a decimal and trailing 0
+	  @decimal_index = @price.index(".")
+	  # Check if a digit exists two places after the decimal 
+	  if not @price[@decimal_index+2]
+		  # Add a 0 in that place
+		  @price[@decimal_index+2] = "0"
+		  @return_string = "#{@dolla_sign}#{@price}"
+	  else
+		  @return_string = "#{@dolla_sign}#{@price}"
+	  end
+	  return @return_string
   end
 end
