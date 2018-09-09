@@ -50,7 +50,6 @@ end
 def sum_to_n?(array, n)
   # Unless the arry is empty...
   unless array.empty?
-          @sum = 0
 	  # Return true if any two elements added equal n
 	  return array.combination(2).any? { |n1, n2| n1 + n2 == n }
   else
@@ -94,11 +93,8 @@ def binary_multiple_of_4?(s)
 
   # "0" is still valid since zero is divisible by anything
   # The 0 as the result of an invalid string means the input string was invalid!
-  while @str != "0"
-        if @num == 0
-                return false
-        end
-        break
+  if @str != "0" && if @num == 0
+          return false
   end
   # Check for numbers divisible by 4
   if @num % 4 == 0
